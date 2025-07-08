@@ -1,27 +1,32 @@
-# PubMed Fetcher
+# 🧬 PubMed Fetcher
 
-A command-line tool to fetch PubMed research papers with at least one non-academic author (from pharmaceutical/biotech companies).
+A command-line Python tool to fetch and filter research papers from **PubMed** based on custom search queries — specifically identifying papers with at least one **non-academic author** from **pharmaceutical or biotech companies**.
+
+---
+
+## 💡 About This Project
+
+This tool was created to assist in automated research paper mining with a focus on industry collaborations. It makes use of PubMed’s public API to fetch articles and then filters authors using affiliation-based heuristics.
+
+Developed with ❤️ by **Ritesh Dalvi** (MCA - 2025)
+
+---
 
 ## 📦 Features
 
-- Uses PubMed's API
-- Filters authors based on non-academic affiliation
-- Outputs data to CSV or console
+- 🔍 Fetches papers using PubMed’s E-utilities API
+- 🧪 Filters authors affiliated with **non-academic institutions**
+- 🏢 Extracts company names and email addresses from affiliations
+- 📁 Exports filtered data to **CSV**
+- 💻 Command-line tool with **Poetry** CLI integration
+- 🛠️ Modular code structure (CLI + core logic)
 
-## 🚀 Usage
+---
+
+## 🚀 Quick Start
+
+### 🖥️ Step 1: Clone this repo
 
 ```bash
-poetry install
-poetry run get-papers-list "diabetes treatment" -f results.csv
-```
-
-## 🧰 Options
-
-- `-h`, `--help`: Show help message
-- `-d`, `--debug`: Enable debug logging
-- `-f`, `--file`: Save output to CSV file
-
-## 🧠 Heuristics
-
-- Authors with affiliations that **do not** include: university, college, institute, school, hospital
-- Email parsing via regex from affiliation strings
+git clone https://github.com/ritzdalavi/pubmed_fetcher_fetcher.git
+cd pubmed_fetcher_fetcher
